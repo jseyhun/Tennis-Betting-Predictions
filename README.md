@@ -28,12 +28,11 @@ For example, see the January 9th, 2019 second round match between Gilles Simon a
 
 So, similar to the dice example where you as the bookie offer 5:1 odds, we first need to remove the bookie's edge before converting odds to probabilities. We can first calculate the edge of the match simply by:
 <p align="center"><img src="https://latex.codecogs.com/gif.latex?e%20%3D%20%7B1%20%5Cover%20w%7D%20&plus;%20%7B1%20%5Cover%20l%7D%20-%201" /></p>
-Where 
-![w equation](https://latex.codecogs.com/gif.latex?w)
-and 
-![l](https://latex.codecogs.com/gif.latex?l)
-are the odds of the odds of the eventual match winner and loser respectively. 
+
+Where ![w equation](https://latex.codecogs.com/gif.latex?w) and ![l](https://latex.codecogs.com/gif.latex?l) are the odds of the odds of the eventual match winner and loser respectively. 
+
 Then, to calculate the fair odds for the winner:
+
 <p align="center"><img src="https://latex.codecogs.com/gif.latex?w_%7Bf%7D%20%3D%20%7B1%20%5Cover%20w%20%5Ctimes%20%28e-1%29%7D" /></p>
 The fair odds are then inverted to get probabilities. 
 
@@ -43,3 +42,8 @@ Finally, the probabilities are rounded down to the nearest 2% increment to creat
 
 The graph shows a fairly close association - the predicted probabilities appear to follow the actual probabilities, especially
 towards the center of the axes. However, overestimation is observable near the ends. Meaning, actual probabilities are higher than predicted probabilities when predicted probabilities are close to 100%, and vice versa when close to 0%. This is evident from the slight curves above and below the graph, most clearly with Bet365.
+
+One factor that could contribute to this overestimation is that it's much harder to estimate probabilities that are very close to zero or 100%. 
+
+### References
+* [Source 1](https://arxiv.org/ftp/arxiv/papers/1710/1710.02824.pdf)
