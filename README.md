@@ -38,7 +38,7 @@ The fair odds are then inverted to get probabilities.
 
 Finally, the probabilities are rounded down to the nearest 2% increment to create buckets. The graph will consist of, for each bucket, a comparison of the ratio of wins to total matches in the bucket against the bucket itself.
 
-# Results & Conclusions
+# Results 
 
 The graph shows a fairly close association - the predicted probabilities appear to follow the actual probabilities, especially
 towards the center of the axes. However, overestimation is observable near the ends. Meaning, actual probabilities are higher than predicted probabilities when predicted probabilities are close to 100%, and vice versa when close to 0%. This is evident from the slight curves above and below the graph, most clearly with Bet365. Perhaps this could be exploited by a savvy gambler! But, that is for another project.
