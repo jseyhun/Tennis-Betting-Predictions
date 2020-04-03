@@ -41,9 +41,7 @@ Finally, the probabilities are rounded down to the nearest 2% increment to creat
 # Results & Conclusions
 
 The graph shows a fairly close association - the predicted probabilities appear to follow the actual probabilities, especially
-towards the center of the axes. However, overestimation is observable near the ends. Meaning, actual probabilities are higher than predicted probabilities when predicted probabilities are close to 100%, and vice versa when close to 0%. This is evident from the slight curves above and below the graph, most clearly with Bet365.
-
-One factor that could contribute to this overestimation is that it's much harder to estimate probabilities that are very close to zero or 100%. 
+towards the center of the axes. However, overestimation is observable near the ends. Meaning, actual probabilities are higher than predicted probabilities when predicted probabilities are close to 100%, and vice versa when close to 0%. This is evident from the slight curves above and below the graph, most clearly with Bet365. Perhaps this could be exploited by a savvy gambler! But, that is for another project.
 
 ### References
 * [Source 1](https://arxiv.org/ftp/arxiv/papers/1710/1710.02824.pdf)
