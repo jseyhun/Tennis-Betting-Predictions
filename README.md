@@ -1,6 +1,6 @@
 ![Main results graph](https://github.com/jseyhun/Tennis-Betting-Predictions/blob/master/graphs/20200108%20-%20Act%20vs%20Pred%20Graphs_v3.png)
 
-By using the probabilities implied from odds given by four large bookies on professional men's tennis matches, I show the overestimation close to the tails, i.e. 0 and 100 percent predicted probability.  For each graph, this can be seen as the differenc between the actual probabilities of victory - the colored portion of the line - and the predicted probabilities of victory represented by the black 45 degree diagonal line.
+By using the probabilities implied from odds given by four large bookies on professional men's tennis matches, I show the existence of the favorite-longshot bias in the market for tennis betting, - the likelihood of winning for favorites is underestimated while the opposite occurs for long shots.  For each graph, this can be seen as the differenc between the actual probabilities of victory - the colored portion of the line - and the predicted probabilities of victory represented by the black 45 degree diagonal line.
 
 # Background
 
@@ -45,3 +45,4 @@ towards the center of the axes. However, overestimation is observable near the e
 
 ### References
 * [Source 1](https://arxiv.org/ftp/arxiv/papers/1710/1710.02824.pdf)
+* [Source 2]
