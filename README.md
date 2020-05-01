@@ -1,23 +1,24 @@
 ![Main results graph](https://github.com/jseyhun/Tennis-Betting-Predictions/blob/master/graphs/20200108%20-%20Act%20vs%20Pred%20Graphs_v3.png)
 
-By using the probabilities implied from odds given by four large bookies on professional men's tennis matches, I show the overestimation close to the tails, i.e. 0 and 100 percent predicted probability.  For each graph, this can be seen as the differenc between the actual probabilities of victory - the colored portion of the line - and the predicted probabilities of victory represented by the black 45 degree diagonal line.
+By using the probabilities implied from odds given by four large bookies on professional men's tennis matches, I show the existence of the favorite-longshot bias in the market for tennis betting, i.e. - the likelihood of winning for favorites is underestimated while the opposite occurs for long-shots.  For each graph, this can be seen as the difference between the actual probabilities of victory, the colored portion of the line, and the predicted probabilities of victory represented by the black 45 degree diagonal.
 
 # Background
 
 Odds, like the ones provided by bookmakers, inherently represent probabilities. To see this, imagine that you are facilitating a gambling game for your six closest friends, whom you refer to as "Friend 1" through "Friend 6". 
 You'll throw a six-sided dice, and whichever number lands up, you will pay that friend in accordance with his bet. 
-To determine how much you'll pay him, of course you'll need to set the odds. Fair odds would represent exactly the inverse of his chance of winning, which is 1/6. If everyone wagers $1 and you offer 6:1 odds, you are guaranteed to exactly break even, because you will pay the winner each of the six dollars you collected before the roll. 
-Similarly, if you offer 5:1 odds, you're guaranteed a $1 profit, and if you're feeling bad because you still can't remember your friends' names, 7:1 odds will guarantee you make a $1 donation.
+To determine how much you'll pay him, of course you'll need to set the odds. Fair odds would represent exactly the inverse of the chance of winning, which is 1/6. If everyone wagers $1 and you offer 6:1 odds, you are guaranteed to exactly break even, because you will pay the winner each of the six dollars you collected before the roll. 
+Similarly, if you offer 5:1 odds, you're guaranteed a $1 profit (called the "juice"), and if you're feeling bad because you still can't remember your friends' names, 7:1 odds will guarantee you make a $1 donation.
 
-Of course, you may want to adjust your odds if your friends are wagering different amounts of money.  
-If Friend 4 is feeling particularly lubricated and wants to make a $5 wager while everyone else is still wagering $1, you would stand to lose $15 from offering the 5:1 odds which previously netted you a guaranteed profit of $1. 
-This is because he will give you his $5 wager, plus $5 from the rest of the players, minus the $25 you owe him when he wins, which will occur 1/6 of the time. 
-The other result that could happen is that one of the $1 wagerers wins, in which case you'll make a $5 profit. In a pure expectation sense, when one person wagers $5 and the rest $1, given 5:1 odds, you'll make $1.67 on average.
-Clearly this is an improvement in your expected earnings as the bookie, but you must also consider that your winnings are now much more volatile as well.
-You are not necessarily better off since you have to consider your own bankroll, and whether or not you can survive if you roll three 4s in a row and have to surrender all of your gas money.
+Unlike with the above, bookies don't care as much about what the underlying probabilities of the event are, they simply want to make consistent money with as little risk as possible. 
+They will set odds that are slightly below fair (ensuring a 5-10% juice) and depending on which way the money comes in, will tweak the odds as necessary so that all sides of the bet stay balanced and risk to themselves is minimized.
+This means there is some expectation of efficiency. 
+If the odds on a long-shot represent a probability that gamblers feel is too low (so the odds are too high), they will place bets on the long-shot. 
+The bookie will then, in an effort to balance the money, lower the odds on the long-shot and raise the odds on the favorite. 
+If bettors are sophisticated, an efficient market would result in bookies' odds that resemble the actual probabilities of the outcomes in reality. 
 
-Lastly, it will not always be the case that an increased wager will make you better off "in expectation". If instead of $5, your friend wants to wager $100, then you'll stand to lose $490 when he wins and gain $100 otherwise, again earning you $1.67 in expectation. 
-Clearly, this is a much worse proposition than the $5 wager situation, because the average earnings are the same, but the risk is much higher.
+So, by looking at the last odds of a tennis match before the match starts, we can calculate the implied probabilities that should best reflect the market's belief in the outcome. 
+Then we can look at what actually happened in the matches and see if the betting market's odds accurately reflect reality. 
+Again, an efficient market would suggest that the bettors on average are correct about the probabilities of winning and losing underlying a tennis match.
 
 # Data
 
@@ -38,10 +39,23 @@ The fair odds are then inverted to get probabilities.
 
 Finally, the probabilities are rounded down to the nearest 2% increment to create buckets. The graph will consist of, for each bucket, a comparison of the ratio of wins to total matches in the bucket against the bucket itself.
 
-# Results 
+# Results and Discussion
 
 The graph shows a fairly close association - the predicted probabilities appear to follow the actual probabilities, especially
-towards the center of the axes. However, overestimation is observable near the ends. Meaning, actual probabilities are higher than predicted probabilities when predicted probabilities are close to 100%, and vice versa when close to 0%. This is evident from the slight curves above and below the graph, most clearly with Bet365. Perhaps this could be exploited by a savvy gambler! But, that is for another project.
+towards the center of the axes. 
+However, bias is observable near the ends as there is slight curvature around the solid diagonal line. 
+Meaning that actual probabilities are higher than predicted probabilities when predicted probabilities are close to 100% and vice versa when close to 0%. This is most clearly seen with bookie Bet365. 
+So, favorites are winning more often than would be implied from the odds, and long-shots are losing more often than predicted. 
+Another way to word it: People are betting more on long-shots and less on favorites than what an efficient market would suggest.
+
+This is actually a well known phenomenon called the favorite-longshot bias, and it is most well understood in the market on horse race betting. 
+A paper by Green, Lee and Rothschild (2018) claim that the prevailing theories for this phenomenon are either that bettors have non-standard preferences (they'd rather get rich quick by betting on long-shots) or that they have biased beliefs. 
+They propose instead though that bookies utilize a pump-and-dump scheme whereby they inflate the morning odds, making the long-shots more attractive and inflating the bets placed on them. 
+Then, as the odds finalize near race time, sophisticated gamblers betting online place bets on the favorites who have become sufficiently cheaper due to the action on the long-shots. 
+
+This doesn't appear to be what's happening in the tennis market however because this story would suggest that the favorites are adequately bet on come gametime, removing the bias, while the immediate pre-match odds from tennis suggest that the bias is still present. Whether one could profit on this seems unlikely, as the discrepancy doesn't appear to amount to more than 5% while the bookies' juice frequently does. However, if there arises a bookie with a sufficiently low juice, then perhaps some money could be made by betting on favorites. 
 
 ### References
 * [Source 1](https://arxiv.org/ftp/arxiv/papers/1710/1710.02824.pdf)
+* [Source 2](https://www.sportsbettingdime.com/guides/betting-101/how-bookmakers-generate-odds/)
+* [Source 3](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3271248)
