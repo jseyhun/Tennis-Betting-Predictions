@@ -44,7 +44,7 @@ Finally, the probabilities are rounded down to the nearest 2% increment to creat
 The graph shows a fairly close association - the predicted probabilities appear to follow the actual probabilities, especially
 towards the center of the axes. 
 However, bias is observable near the ends as there is slight curvature around the solid diagonal line. 
-Meaning that actual probabilities are higher than predicted probabilities when predicted probabilities are close to 100% and vice versa when close to 0%. This is most clearly seen with bookie Bet365. 
+Meaning that actual probabilities are higher than predicted probabilities when predicted probabilities are close to 100% and vice versa when close to 0%. This is most clearly seen with bookie Ladbrokes. 
 So, favorites are winning more often than would be implied from the odds, and long-shots are losing more often than predicted. 
 Another way to word it: People are betting more on long-shots and less on favorites than what an efficient market would suggest.
 
