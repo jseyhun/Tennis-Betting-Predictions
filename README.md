@@ -30,7 +30,7 @@ For example, see the January 9th, 2019 second round match between Gilles Simon a
 So, similar to the dice example where you as the bookie offer 5:1 odds, we first need to remove the bookie's edge before converting odds to probabilities. We can first calculate the edge of the match simply by:
 <p align="center"><img src="https://latex.codecogs.com/gif.latex?e%20%3D%20%7B1%20%5Cover%20w%7D%20&plus;%20%7B1%20%5Cover%20l%7D%20-%201" /></p>
 
-Where ![w equation](https://latex.codecogs.com/gif.latex?w) and ![l](https://latex.codecogs.com/gif.latex?l) are the odds of the odds of the eventual match winner and loser respectively. 
+Where ![w equation](https://latex.codecogs.com/gif.latex?w) and ![l](https://latex.codecogs.com/gif.latex?l) are the odds of the eventual match winner and loser respectively. 
 
 Then, to calculate the fair odds for the winner:
 
